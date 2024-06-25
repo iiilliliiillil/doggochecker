@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+    <title>Собачекер - Собачки Тбилиси</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="/icon.png" alt="icon" class="icon" />
+
+      <ul class="workouts">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Кличка</label>
+            <input
+              class="form__input form__input--distance"
+              placeholder="Тузик"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Учёт</label>
+            <select class="form__input form__input--typeuc">
+              <option value="running">С чипом</option>
+              <option value="cycling">Без чипа</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Любимая еда</label>
+            <input
+              class="form__input form__input--duration"
+              placeholder="Сосисочки"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Состояние</label>
+            <select class="form__input form__input--typesos">
+              <option value="running">Хорошее</option>
+              <option value="cycling">Требуется помощь</option>
+            </select>
+          </div>
+
+          <label class="form__sublabel__agent hidden"
+            >Сообщить о собаке без чипа: 2 421 424
+          </label>
+          <div class="form__check hidden">
+            <input type="checkbox" />
+            <label class="form__sublabel__priut"
+              >Показать ближайшие приюты</label
+            >
+          </div>
+
+          <button class="form__btn">OK</button>
+        </form>
+
+        <!-- <li class="workout workout--running" data-id="1234567890">
+          <h2 class="workout__title">Пробежка 15.05.2021</h2>
+          <div class="workout__details">
+            <span class="workout__icon">🏃</span>
+            <span class="workout__value">5.0</span>
+            <span class="workout__unit">км</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⏱</span>
+            <span class="workout__value">21</span>
+            <span class="workout__unit">мин</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">📏⏱</span>
+            <span class="workout__value">238</span>
+            <span class="workout__unit">м/мин</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">👟⏱</span>
+            <span class="workout__value">340</span>
+            <span class="workout__unit">шаг/мин</span>
+          </div>
+        </li>
+
+        <li class="workout workout--cycling" data-id="1234567891">
+          <h2 class="workout__title">Велотренировка 07.05.2021</h2>
+          <div class="workout__details">
+            <span class="workout__icon">🚵‍♂️</span>
+            <span class="workout__value">25</span>
+            <span class="workout__unit">км</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⏱</span>
+            <span class="workout__value">91</span>
+            <span class="workout__unit">мин</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">📏⏱</span>
+            <span class="workout__value">17</span>
+            <span class="workout__unit">км/ч</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">🏔</span>
+            <span class="workout__value">251</span>
+            <span class="workout__unit">м</span>
+          </div>
+        </li> -->
+      </ul>
+
+      <p class="footer__copyright">
+        Создай свой личный список уличных собачек Тбилиси и делись им с
+        друзьями.
+      </p>
+
+      <p class="footer__copyright">
+        &copy;
+        <a
+          class="footer__link masters-of-code-link"
+          target="_blank"
+          href="https://masters-of-code.com/"
+          >iiilliliiillil</a
+        >.
+      </p>
+    </div>
+
+    <img id="img-placeholder" style="display: none" src="placeholder.png" />
+    <img id="img-agentpin" style="display: none" src="agentpin.png" />
+    <img id="img-petpin" style="display: none" src="petpin.png" />
+    <img id="img-shelpin" style="display: none" src="shelpin.png" />
+
+    <div id="map"></div>
+  </body>
+</html>

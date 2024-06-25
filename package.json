@@ -1,0 +1,20 @@
+{
+  "name": "doggochecker",
+  "version": "1.0.0",
+  "description": "Dog lists in Tbilisi",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [
+    "maps"
+  ],
+  "author": "RY",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
